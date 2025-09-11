@@ -1,119 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Bridget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      html { scroll-behavior: smooth; }
+      footer {
+        background-color: #030738f3;
+        color: white;
+      }
+      footer a:hover i {
+        color: #0dcaf0;
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+      }
+      .navbar a {
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>About Bridget</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-
-  </style>
-</head>
-
-<body>
-  <!-- Particle Overlay -->
-  <div id="particles-js"></div>
-
-  <div class="main-content">
-    <!-- Navbar with Logo -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="images/LOGO.png" alt="Logo" class="img-fluid" style="max-height:100px; width:auto;">
-
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-
-
-
-
-
-    <div class="container py-5 ">
-
-      <div class="about-section">
-        <div class="row align-items-center">
-          <div class="col-md-4 text-center mb-4 mb-md-0">
-            <img src="images/nowellah.jpg" alt="Bridget" class="profile-img img-fluid">
-          </div>
-          <div class="col-md-8">
-            <h2 class="fw-bold">Hi, I'm Bridget</h2>
-            <p class="lead">Web Developer | Data Analyst | Digital Marketer | Researcher</p>
-            <p>I specialize in building full-stack applications, analyzing data for impact, and crafting digital
-              strategies that connect people and ideas. With a strong foundation in research and data entry, I bring
-              precision and creativity to every project.</p>
-            <ul>
-              <li>🌐 Web Development</li>
-              <li>📊 Data Analysis</li>
-              <li>📣 Digital Marketing</li>
-              <li>🧾 Data Entry</li>
-              <li>🔍 Research & Reporting</li>
+  <body>
+    <div class="main-content">
+      <!-- Navbar with Logo -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images/LOGO.png" alt="Logo" class="logo-img me-2" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link text-dark fs-5 fw-bold" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fs-5 fw-bold" href="about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-bold fs-5" href="projects.html"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-bold fs-5" href="contact.html"
+                  >Contact</a
+                >
+              </li>
             </ul>
           </div>
         </div>
+      </nav>
+
+      <div class="container py-5">
+        <div class="about-section">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+              <img
+                src="images/nowellah.jpg"
+                alt="Bridget"
+                class="profile-img img-fluid"
+              />
+            </div>
+            <div class="col-md-8">
+              <h2 class="fw-bold">Hi, I'm Bridget</h2>
+              <p class="lead">
+                Web Developer | Data Analyst | Digital Marketer | Researcher
+              </p>
+              <p>
+                I specialize in building full-stack applications, analyzing data
+                for impact, and crafting digital strategies that connect people
+                and ideas. With a strong foundation in research and data entry,
+                I bring precision and creativity to every project.
+              </p>
+              <ul>
+                <li>Web Development</li>
+                <li>Data Analysis</li>
+                <li>Digital Marketing</li>
+                <li>Data Entry</li>
+                <li>Research & Reporting</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Footer -->
+  <footer class="text-center py-3">
+    <p class="mb-2">
+      © <span id="year"></span> Bridget. All rights reserved.
+    </p>
+    <div>
+      <a href="https://linkedin.com/in/nowellahwalker" target="_blank" class="mx-2 text-white" title="LinkedIn">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a href="https://github.com/nowellah" target="_blank" class="mx-2 text-white" title="GitHub">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a href="mailto:abridgetnowellah@gmail.com" class="mx-2 text-white" title="Email">
+        <i class="fas fa-envelope fa-lg"></i>
+      </a>
     </div>
+    <p class="text-white">Follow me on social media for updates!</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="text-center bg-dark py-3">
-      <p class="mb-2 text-white">© <span id="year"></span> Bridget. All rights reserved.</p>
-      <div>
-        <a href="https://linkedin.com/in/nowellahwalker" target="_blank" class="mx-2 text-white" title="LinkedIn">
-          <i class="fab fa-linkedin fa-lg"></i>
-        </a>
-        <a href="https://github.com/nowellah" target="_blank" class="mx-2 text-white" title="GitHub">
-          <i class="fab fa-github fa-lg"></i>
-        </a>
-        <a href="mailto:abridgetnowellah@gmail.com" class="mx-2 text-white" title="Email">
-          <i class="fas fa-envelope fa-lg"></i>
-        </a>
-      </div>
-
-    </footer>
-  </div>
-  <script>
-    // Update year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 50 },
-        color: { value: "#333333" }, // darker gray
-        shape: { type: "circle" },
-        opacity: { value: 0.5 },
-        size: { value: 3 },
-        line_linked: {
-          enable: true,
-          color: "#555555",
-          opacity: 0.4
+    </div>
+    <script>
+      // Update year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 50 },
+          color: { value: "#333333" }, // darker gray
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 3 },
+          line_linked: {
+            enable: true,
+            color: "#555555",
+            opacity: 0.4,
+          },
+          move: { speed: 1 },
         },
-        move: { speed: 1 }
-      },
-      interactivity: {
-        events: {
-          onhover: { enable: true, mode: "repulse" }
-        }
-      }
-    });
-  </script>
-
-</body>
-
+        interactivity: {
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+          },
+        },
+      });
+    </script> -->
+  </body>
 </html>
