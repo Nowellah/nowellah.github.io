@@ -16,15 +16,31 @@
       flex-direction: column;
       min-height: 100vh;
     }
+
     .profile-img {
-        max-width: 250px;
-  border-radius: 50%;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      max-width: 250px;
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
 
     }
 
     main {
       flex: 1;
+    }
+
+    .about-section {
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .about-section h2, .about-section p, .about-section ul {
+        text-align: center;
+      }
+    } 
+
+    .col-md-8 {
+      padding-top: 20px;
     }
 
     .container {
@@ -50,9 +66,9 @@
     footer {
       background-color: #030738f3;
       color: white;
-        width: 100%;
-  padding: 20px 0;
-  text-align: center;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
 
     }
 
@@ -63,21 +79,21 @@
     }
 
     .logo-img {
-  height: 60px;
-  width: auto;
-}
+      height: 60px;
+      width: auto;
+    }
 
     .navbar a {
       font-size: 1.2rem;
       font-weight: 500;
       letter-spacing: 0.5px;
     }
-    .navbar-nav .nav-link {
-  padding: 8px 12px;
-  font-size: 1rem;
-  font-weight: 500;
-}
 
+    .navbar-nav .nav-link {
+      padding: 8px 12px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
   </style>
 </head>
 
@@ -165,7 +181,7 @@
     // Update year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
