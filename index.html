@@ -17,6 +17,56 @@
             background-color: #f8f9fa;
         }
 
+        .skill-box {
+            background: #1e293b;
+            /* dark slate background */
+            padding: 2rem;
+            border-radius: 0.75rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-title {
+            color: #f8fafc;
+            margin-bottom: 1rem;
+        }
+
+        .skill-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background-color: #0F1341;
+            
+            min-height: 100vh;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            color: #f8fafc;
+        }
+
+        .hero .lead {
+            color: #e2e8f0;
+        }
+
+        .btn-cv {
+            background-color: #2563eb;
+            color: #fff;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-cv:hover {
+            background-color: #1e40af;
+            color: #fff;
+        }
+
         .hero h1 {
             font-size: 3rem;
         }
@@ -218,31 +268,37 @@
     <header class="hero text-light d-flex align-items-center justify-content-center">
         <div class="container">
             <div class="row align-items-center">
+
                 <!-- Text Column -->
                 <div class="col-md-7 text-center text-md-start">
                     <h1 class="display-4 text-light fw-bold">
                         Hi, I'm Nowellah <span class="typed-text text-accent"></span>
                     </h1>
                     <p class="lead">
-                        Web Developer | Data Analyst | Digital Marketer | Researcher
+                        Full‑Stack Developer | Data Analyst
                     </p>
                     <p class="lead mt-3">
-                        I build full-stack web apps, analyze data for impact, and explore
-                        digital strategies that drive results.
+                        I design and build scalable full‑stack applications, develop robust APIs,
+                        and analyze data to deliver actionable insights.
                     </p>
                     <p class="lead mt-3">
-                        Crafting digital experiences with data, design, and culture.
+                        Skilled in Python, Django, Node.js, React, React Native, PostgreSQL, MongoDB,
+                        and agile methodologies.
                     </p>
-                    <a href="MY RESUMEE.pdf" class="btn btn-cv btn-lg me-2" download>Download CV</a>
+                    <a href="Ampiire Bridget Nowellah - CV.pdf" class="btn btn-cv btn-lg me-2" download>
+                        Download CV
+                    </a>
                     <a href="projects.html" class="btn btn-cv btn-lg fw-bold">
-                        Explore My Work</a>
+                        Explore My Work
+                    </a>
                 </div>
 
                 <!-- Image Column -->
                 <div class="col-md-5 text-center mt-4 mt-md-0">
-                    <img src="images/Ampiire.jpg" alt="Bridget" class="img-fluid rounded-circle shadow"
-                        style="max-width: 250px" />
+                    <img src="images/Nowe.jpg" alt="Bridget" class="img-fluid rounded-circle shadow-lg"
+                        style="max-width: 250px;" />
                 </div>
+
             </div>
         </div>
     </header>
@@ -253,61 +309,43 @@
                 SKILLS & EXPERTISE
             </h2>
             <div class="row g-4 justify-content-center">
-                <div class="col-12 col-sm-6 col-lg-2">
-                    <div class="skill-box text-center">
-                        <i class="fas fa-code"></i>
-                        <h3 class="skill-title">Web Development</h3>
-                        <p class="skill-description text-white">
-                            Designing and building responsive, full-stack applications that blend functionality with
-                            visual clarity. I
-                            specialize in clean code, intuitive layouts, and seamless user experiences.
+
+                <!-- Software Development -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="skill-box text-center p-4 h-100">
+                        <i class="fas fa-code fa-lg mb-3 text-accent"></i>
+                        <h5 class="fw-bold mb-2">Software Development</h5>
+                        <p class="text-white small">
+                            Building scalable full‑stack applications with clean code and intuitive layouts. Skilled in
+                            Python, Django, Node.js, React, React Native, PostgreSQL, and MongoDB.
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-2">
-                    <div class="skill-box text-center">
-                        <i class="fas fa-chart-line"></i>
-                        <h3 class="skill-title">Data Analysis</h3>
-                        <p class="skill-description text-white">
-                            Transforming raw datasets into actionable insights using Python, Excel, and visualization
-                            tools. I uncover
-                            patterns, trends, and opportunities that drive smarter decisions.
+
+                <!-- Data Analysis -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="skill-box text-center p-4 h-100">
+                        <i class="fas fa-chart-line fa-lg mb-3 text-accent"></i>
+                        <h5 class="fw-bold mb-2">Data Analysis</h5>
+                        <p class="text-white small">
+                            Turning raw data into insights using Python, Pandas, and visualization tools. Experienced in
+                            uncovering trends and driving smarter decisions.
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-2">
-                    <div class="skill-box text-center">
-                        <i class="fas fa-bullhorn"></i>
-                        <h3 class="skill-title text-white">Digital Marketing</h3>
-                        <p class="skill-description text-white">
-                            Crafting strategic campaigns that connect audiences with brands. From SEO to content
-                            strategy and
-                            analytics, I optimize visibility and engagement across digital platforms.
+
+                <!-- Research -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="skill-box text-center p-4 h-100">
+                        <i class="fas fa-search fa-lg mb-3 text-accent"></i>
+                        <h5 class="fw-bold mb-2">Research</h5>
+                        <p class="text-white small">
+                            Conducting structured investigations across tech, climate, and industry trends. Turning
+                            curiosity into clarity through evidence‑based exploration.
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-2">
-                    <div class="skill-box text-center">
-                        <i class="fas fa-file-alt"></i>
-                        <h3 class="skill-title">Data Entry</h3>
-                        <p class="skill-description text-white">
-                            Delivering fast, accurate, and organized data handling for business and research workflows.
-                            I ensure
-                            precision and consistency in every detail.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-2">
-                    <div class="skill-box text-center">
-                        <i class="fas fa-search"></i>
-                        <h3 class="skill-title">Research</h3>
-                        <p class="skill-description text-white">
-                            Conducting deep, methodical investigations across climate, geography, pop culture, and
-                            market trends. I
-                            turn curiosity into clarity through structured exploration.
-                        </p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -338,10 +376,8 @@
         document.getElementById("year").textContent = new Date().getFullYear();
         const typed = new Typed(".typed-text", {
             strings: [
-                "Web Developer",
+                "Software Developer",
                 "Data Analyst",
-                "Digital Marketer",
-                "Brand Strategist",
                 "Climate Explorer",
                 "Tech Savvy",
             ],
