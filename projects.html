@@ -25,6 +25,28 @@
             flex: 1;
         }
 
+        .card {
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+           
+
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .tech-tag {
+            font-size: 0.75rem;
+            padding: 0.4em 0.6em;
+            border-radius: 0.5rem;
+        }
+
         .project-image img {
             height: 180px;
             object-fit: cover;
@@ -179,7 +201,7 @@
                                 Analyzed climate trends using Python and visualization tools. Delivered insights for
                                 sustainability and environmental planning.
                             </p>
-                            <div class="mt-auto">
+                            <div class="mt-auto tech-tag">
                                 <span class="badge bg-primary me-2 mb-2">Python</span>
                                 <span class="badge bg-info me-2 mb-2">Pandas</span>
                                 <span class="badge bg-success me-2 mb-2">Matplotlib</span>
@@ -204,7 +226,7 @@
                                 Built backend infrastructure for a ride-hailing app with real-time tracking, ride
                                 matching, payments, and authentication.
                             </p>
-                            <div class="mt-auto">
+                            <div class="mt-auto tech-tag">
                                 <span class="badge bg-primary me-2 mb-2">Django</span>
                                 <span class="badge bg-success me-2 mb-2">React Native</span>
                                 <span class="badge bg-warning me-2 mb-2">PostgreSQL</span>
@@ -230,7 +252,7 @@
                                 Developed a web portal and CMS for APF Uganda. Managed member registrations, content
                                 delivery, and admin workflows.
                             </p>
-                            <div class="mt-auto">
+                            <div class="mt-auto tech-tag">
                                 <span class="badge bg-primary me-2 mb-2">Django</span>
                                 <span class="badge bg-success me-2 mb-2">React.js</span>
                                 <span class="badge bg-info me-2 mb-2">Strapi CMS</span>
@@ -255,7 +277,7 @@
                                 Responsive web app with authentication, database integration, and RESTful APIs using
                                 Node.js, React, and Bootstrap.
                             </p>
-                            <div class="mt-auto">
+                            <div class="mt-auto tech-tag">
                                 <span class="badge bg-primary me-2 mb-2">Node.js</span>
                                 <span class="badge bg-success me-2 mb-2">React</span>
                                 <span class="badge bg-info me-2 mb-2">Bootstrap</span>
