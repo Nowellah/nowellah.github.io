@@ -636,13 +636,23 @@
 
         .project-img-wrap {
             position: relative;
+            color: white;
             overflow: hidden;
+        }
+        .project-img-tags {
+            position: absolute;
+            color: white;
+            bottom: 0; left: 0; right: 0;
+            display: flex; flex-wrap: wrap; gap: 0.3rem;
+            padding: 0.6rem 0.75rem;
+            background: linear-gradient(to top, rgba(11,17,32,0.92) 0%, transparent 100%);
+            z-index: 2;
         }
 
         .project-img {
             width: 100%;
             height: 175px;
-            object-fit: fit;
+            object-fit: contain;
             background: #0b1120;
             display: block;
             transition: transform 0.5s ease;
@@ -693,11 +703,22 @@
         }
 
         .project-body p {
-            color: #fff;
+            color: #475569;
             font-size: 0.83rem;
             line-height: 1.65;
             flex: 1;
-            margin-bottom: 1rem;
+            margin-bottom: 0.6rem;
+        }
+        .project-impact {
+            font-size: 0.75rem !important;
+            font-weight: 600 !important;
+            color: #fff !important;
+            background: transparent;
+            border-left: 2px solid #3b82f6;
+            padding: 0.35rem 0.6rem;
+            border-radius: 2 6px 6px 0;
+            margin-bottom: 0.75rem !important;
+            flex: none !important;
         }
 
         .badge-live {
@@ -721,9 +742,9 @@
         .tech-tag {
             font-size: 0.7rem;
             font-weight: 600;
-            background: #f1f5f9;
+            background: transparent;
             border: 1px solid #e2e8f0;
-            color: #475569;
+            color: #fff;
             padding: 0.2rem 0.6rem;
             border-radius: 100px;
         }
@@ -757,32 +778,75 @@
             gap: 1.25rem;
             flex-wrap: wrap;
         }
+
         .contact-icon-btn {
-            width: 56px; height: 56px;
+            width: 56px;
+            height: 56px;
             border-radius: 14px;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.12);
-            display: flex; align-items: center; justify-content: center;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.3rem;
             text-decoration: none;
             transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
         }
-        .contact-icon-btn:hover { transform: translateY(-4px); }
+
+        .contact-icon-btn:hover {
+            transform: translateY(-4px);
+        }
 
         /* brand colors */
-        .contact-icon-btn .fa-envelope       { color: #ea4335; }
-        .contact-icon-btn .fa-linkedin       { color: #0a66c2; }
-        .contact-icon-btn .fa-github         { color: #f0f6fc; }
-        .contact-icon-btn .fa-whatsapp       { color: #25d366; }
-        .contact-icon-btn .fa-x-twitter      { color: #f0f6fc; }
+        .contact-icon-btn .fa-envelope {
+            color: #ea4335;
+        }
+
+        .contact-icon-btn .fa-linkedin {
+            color: #0a66c2;
+        }
+
+        .contact-icon-btn .fa-github {
+            color: #f0f6fc;
+        }
+
+        .contact-icon-btn .fa-whatsapp {
+            color: #25d366;
+        }
+
+        .contact-icon-btn .fa-x-twitter {
+            color: #f0f6fc;
+        }
 
         /* hover — fill bg with brand color */
-        .contact-icon-btn:has(.fa-envelope):hover  { background: #ea4335; box-shadow: 0 8px 20px rgba(234,67,53,0.4); }
-        .contact-icon-btn:has(.fa-linkedin):hover  { background: #0a66c2; box-shadow: 0 8px 20px rgba(10,102,194,0.4); }
-        .contact-icon-btn:has(.fa-github):hover    { background: #333;    box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
-        .contact-icon-btn:has(.fa-whatsapp):hover  { background: #25d366; box-shadow: 0 8px 20px rgba(37,211,102,0.4); }
-        .contact-icon-btn:has(.fa-x-twitter):hover { background: #000;    box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
-        .contact-icon-btn:hover i { color: #fff !important; }
+        .contact-icon-btn:has(.fa-envelope):hover {
+            background: #ea4335;
+            box-shadow: 0 8px 20px rgba(234, 67, 53, 0.4);
+        }
+
+        .contact-icon-btn:has(.fa-linkedin):hover {
+            background: #0a66c2;
+            box-shadow: 0 8px 20px rgba(10, 102, 194, 0.4);
+        }
+
+        .contact-icon-btn:has(.fa-github):hover {
+            background: #333;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-icon-btn:has(.fa-whatsapp):hover {
+            background: #25d366;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .contact-icon-btn:has(.fa-x-twitter):hover {
+            background: #000;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-icon-btn:hover i {
+            color: #fff !important;
+        }
 
 
         .contact-form-card label {
@@ -1021,35 +1085,36 @@
             <div class="container">
                 <div class="row align-items-center gy-3">
                     <div class="col-lg-7">
-                        <div class="hero-eyebrow"><span class="dot"></span> Ready to work</div>
-                        <h1 class="hero-name">Hi, I'm Nowellah</h1>
+                        <div class="hero-eyebrow"><span class="dot"></span> Building real-world digital solutions</div>
+                        <h1 class="hero-name">
+                            Hi, I'm Nowellah
+                        </h1>
                         <p class="hero-role"><span class="typed-text"></span></p>
                         <!-- <p class="hero-desc">Full-Stack Developer and Data Analyst based in Uganda. I build
                         scalable applications, design robust APIs, and turn data into decisions that matter.</p> -->
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="Bridget-CV.pdf" class="btn-hero-primary" download><i
-                                    class="fas fa-download"></i> Download CV</a>
-                            <a href="#projects" class="btn-hero-ghost"><i class="fas fa-arrow-right"></i> View My
-                                Work</a>
+                            <a href="Nowellah-CV.pdf" class="btn-hero-primary" download><i class="fas fa-download"></i>
+                                Download Resume</a>
+                            <a href="#projects" class="btn-hero-ghost"><i class="fas fa-arrow-right"></i> Explore Projects</a>
                         </div>
                         <div class="hero-stats">
                             <div>
                                 <div class="hero-stat-num" data-count="4">0</div>
-                                <div class="hero-stat-label">Projects Shipped</div>
+                                <div class="hero-stat-label">Projects Delivered</div>
                             </div>
                             <div>
                                 <div class="hero-stat-num" data-count="1.5">0</div>
-                                <div class="hero-stat-label">Years Experience</div>
+                                <div class="hero-stat-label">Years Building Software</div>
                             </div>
                             <div>
                                 <div class="hero-stat-num" data-count="2">0</div>
-                                <div class="hero-stat-label">Live Products</div>
+                                <div class="hero-stat-label">Production systems</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5 text-center">
                         <div class="hero-img-wrap d-inline-block tilt" id="heroImgWrap">
-                            <img src="images/Nowe.jpeg" alt="Nowellah" class="hero-img" />
+                            <img src="images/WhatsApp Image 2026-04-12 at 22.37.33.jpeg" alt="Nowellah" class="hero-img" />
                         </div>
                     </div>
                 </div>
@@ -1064,14 +1129,16 @@
                         style="display:flex; flex-direction:column; align-items:flex-start; justify-content:center;">
                         <p class="section-tag">About me</p>
                         <h2 class="section-heading">Who I am</h2>
-                        <!-- <p class="section-sub mt-2">A developer who cares about craft, clarity, and impact.</p> -->
+                        <p class="section-sub mt-2">A systems thinker focused on building impactful digital solutions.
                     </div>
                     <div class="col-lg-8 reveal-right">
                         <div class="about-card">
-                            <p class="mb-3">I'm a Full-Stack Developer and Data Analyst with a passion for building
-                                products
-                                that are technically solid and genuinely useful. My work spans backend systems, frontend
-                                interfaces, database architecture, and data pipelines — all grounded in agile practices.
+                            <p>
+                                I am a solution-driven developer who enjoys turning complex ideas into
+                                practical systems people can actually use. My work spans full-stack
+                                development, data analytics, and AI-driven solutions.
+                                I thrive in collaborative environments, value clean architecture,
+                                and focus on building technology that creates real impact.
                             </p>
                             <!-- <p class="mb-4">Beyond code, I'm drawn to climate research and the intersection of technology
                             and sustainability. I believe the best software solves real problems for real people.</p> -->
@@ -1139,6 +1206,7 @@
                                 <span class="sk-tag">Node.js</span>
                                 <span class="sk-tag">Express.js</span>
                                 <span class="sk-tag">React.js</span>
+                                <span class="sk-tag">Vue.js</span>
                             </div>
                         </div>
                     </div>
@@ -1203,21 +1271,19 @@
                         <div class="project-card">
                             <div class="project-img-wrap">
                                 <img src="images/kflix.png" alt="Kflix" class="project-img" />
-                                <div class="project-overlay"><span class="project-overlay-text"><i
-                                            class="fas fa-eye me-2"></i>View Project</span></div>
-                            </div>
-                            <div class="project-body">
-                                <h5>Kflix <span class="badge-live">LIVE</span></h5>
-                                <p>A full-stack streaming platform with user authentication, content management,
-                                    subscription billing, and a responsive video player.</p>
-                                <div class="tech-tags">
+                                <div class="project-img-tags">
                                     <span class="tech-tag">Django</span>
-                                    <span class="tech-tag">React.js</span>
+                                    <span class="tech-tag">Vue.js</span>
                                     <span class="tech-tag">PostgreSQL</span>
                                     <span class="tech-tag">REST API</span>
                                 </div>
-                                <a href="https://kflixtv.com" target="_blank" class="btn-project"><i
-                                        class="fas fa-eye"></i> View Project</a>
+                                <div class="project-overlay"><span class="project-overlay-text"><i class="fas fa-eye me-2"></i>View Project</span></div>
+                            </div>
+                            <div class="project-body">
+                                <h5>Kflix <span class="badge-live">LIVE</span></h5>
+                                <p>Full-stack streaming platform with auth, content management, and subscription billing.</p>
+                                <p class="project-impact"><i class="fas fa-bolt me-1"></i>Movies, music, gaming & live streaming in one place</p>
+                                <a href="https://kflixtv.com" target="_blank" class="btn-project"><i class="fas fa-eye"></i> View Project</a>
                             </div>
                         </div>
                     </div>
@@ -1227,21 +1293,19 @@
                         <div class="project-card">
                             <div class="project-img-wrap">
                                 <img src="images/LogoDashboard.png" alt="APF Uganda" class="project-img" />
-                                <div class="project-overlay"><span class="project-overlay-text"><i
-                                            class="fas fa-eye me-2"></i>View Project</span></div>
-                            </div>
-                            <div class="project-body">
-                                <h5>APF Uganda Portal <span class="badge-live">LIVE</span></h5>
-                                <p>Membership management web portal and CMS for APF Uganda. Handles registrations,
-                                    content delivery, and admin workflows.</p>
-                                <div class="tech-tags">
+                                <div class="project-img-tags">
                                     <span class="tech-tag">Django</span>
                                     <span class="tech-tag">React.js</span>
                                     <span class="tech-tag">Strapi CMS</span>
                                     <span class="tech-tag">PostgreSQL</span>
                                 </div>
-                                <a href="https://apfuganda.org" target="_blank" class="btn-project"><i
-                                        class="fas fa-eye"></i> View Project</a>
+                                <div class="project-overlay"><span class="project-overlay-text"><i class="fas fa-eye me-2"></i>View Project</span></div>
+                            </div>
+                            <div class="project-body">
+                                <h5>APF Uganda Portal <span class="badge-live">LIVE</span></h5>
+                                <p>Membership management web portal and CMS for APF Uganda. Handles registrations, content delivery, and admin workflows.</p>
+                                <p class="project-impact"><i class="fas fa-bolt me-1"></i>Digitised 500+ member records, cutting admin time by 60%</p>
+                                <a href="https://apfuganda.org" target="_blank" class="btn-project"><i class="fas fa-eye"></i> View Project</a>
                             </div>
                         </div>
                     </div>
@@ -1251,21 +1315,18 @@
                         <div class="project-card">
                             <div class="project-img-wrap">
                                 <img src="images/UGANDA.png" alt="Analytics Assistant" class="project-img" />
-                                <div class="project-overlay"><span class="project-overlay-text"><i
-                                            class="fas fa-eye me-2"></i>View Project</span></div>
-                            </div>
-                            <div class="project-body">
-                                <h5>Analytics Assistant</h5>
-                                <p>An AI-powered analytics tool that lets users query datasets in plain English and get
-                                    instant visualizations and insights.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Django</span>
+                                <div class="project-img-tags">
+                                    <span class="tech-tag">Fast API</span>
                                     <span class="tech-tag">React.js</span>
                                     <span class="tech-tag">OpenAI API</span>
                                 </div>
-                                <a href="https://github.com/nowellah" target="_blank" class="btn-project"><i
-                                        class="fas fa-eye"></i> View Project</a>
+                                <div class="project-overlay"><span class="project-overlay-text"><i class="fas fa-eye me-2"></i>View Project</span></div>
+                            </div>
+                            <div class="project-body">
+                                <h5>Analytics Assistant</h5>
+                                <p>An AI-powered analytics tool that lets users query datasets in plain English and get instant visualizations and insights.</p>
+                                <p class="project-impact"><i class="fas fa-bolt me-1"></i>Enables non-technical users to generate insights in seconds</p>
+                                <a href="https://github.com/nowellah" target="_blank" class="btn-project"><i class="fas fa-eye"></i> View Project</a>
                             </div>
                         </div>
                     </div>
@@ -1275,21 +1336,19 @@
                         <div class="project-card">
                             <div class="project-img-wrap">
                                 <img src="images/jambo-logo.jpg" alt="Rider App" class="project-img" />
-                                <div class="project-overlay"><span class="project-overlay-text"><i
-                                            class="fas fa-eye me-2"></i>View Project</span></div>
+                                <div class="project-img-tags">
+                                    <span class="tech-tag">Django</span>
+                                    <span class="tech-tag">Flutter</span>
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                </div>
+                                <div class="project-overlay"><span class="project-overlay-text"><i class="fas fa-eye me-2"></i>View Project</span></div>
                             </div>
                             <div class="project-body">
                                 <h5>Rider App <span class="badge-live">LIVE</span></h5>
-                                <p>Backend infrastructure for a ride-hailing mobile app with real-time tracking, ride
-                                    matching, payments, and authentication.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Django</span>
-                                    <span class="tech-tag">Flutter Wave</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <!-- <span class="tech-tag">WebSockets</span> -->
-                                </div>
-                                <a href="https://jamboapp.io/" target="_blank" class="btn-project"><i
-                                        class="fas fa-eye"></i> View Project</a>
+                                <p>Backend infrastructure for a ride-hailing mobile app with real-time tracking, ride matching, payments, and authentication.</p>
+                                <p class="project-impact"><i class="fas fa-bolt me-1"></i>Handles 200+ concurrent rides with sub-second matching</p>
+                                <a href="https://jamboapp.io/" target="_blank" class="btn-project"><i class="fas fa-eye"></i> View Project</a>
                             </div>
                         </div>
                     </div>
@@ -1303,20 +1362,23 @@
             <div class="container">
                 <div class="text-center mb-4 reveal">
                     <p class="section-tag">Get in touch</p>
-                    <h2 class="section-heading">Let's Connect</h2>
-                    <p class="section-sub mx-auto mt-2">Have a project in mind or just want to say hi? Reach out through any of the channels below.</p>
+                    <h2 class="section-heading">Let’s Build Something Meaningful</h2>
+                    <p class="section-sub mx-auto mt-2">Have a project in mind or just want to say hi? Reach out through
+                        any of the channels below.</p>
                 </div>
                 <div class="contact-icons-row reveal">
                     <a href="mailto:abridgetnowellah506@gmail.com" class="contact-icon-btn" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://linkedin.com/in/nowellahwalker" target="_blank" class="contact-icon-btn" title="LinkedIn">
+                    <a href="https://linkedin.com/in/nowellahwalker" target="_blank" class="contact-icon-btn"
+                        title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="https://github.com/nowellah" target="_blank" class="contact-icon-btn" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://wa.me/256776531930" target="_blank" class="contact-icon-btn whatsapp" title="WhatsApp">
+                    <a href="https://wa.me/256776531930" target="_blank" class="contact-icon-btn whatsapp"
+                        title="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a href="https://x.com/nowellahwaker" target="_blank" class="contact-icon-btn" title="X (Twitter)">
@@ -1347,7 +1409,9 @@
         <script>
             // ── Typed.js ──
             new Typed(".typed-text", {
-                strings: ["Full-Stack Developer", "Tech Savvy", "Problem Solver", "API Architect"],
+                strings: ["Building systems that solve real problems",
+                    "Turning ideas into impactful digital products",
+                    "Developer | Problem Solver | Builder"],
                 typeSpeed: 55, backSpeed: 30, backDelay: 2000, loop: true,
             });
 
