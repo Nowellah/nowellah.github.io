@@ -11,6 +11,7 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <style>
         :root {
             --bg: #0b1120;
@@ -1045,6 +1046,57 @@
             transform: translateY(-2px);
         }
 
+        /* ── MARQUEE (horizontal, full-width, seamless) ── */
+        .ticker-outer {
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+        }
+        .ticker-track {
+            display: flex;
+            width: max-content;
+        }
+        .ticker-right { animation: ticker-scroll-right 30s linear infinite; }
+        .ticker-left  { animation: ticker-scroll-left  30s linear infinite; }
+        .ticker-outer:hover .ticker-right,
+        .ticker-outer:hover .ticker-left { animation-play-state: paused; }
+        @keyframes ticker-scroll-right {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes ticker-scroll-left {
+            0%   { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        .ticker-row {
+            display: flex;
+            gap: 0.75rem;
+            padding-right: 0.75rem;
+            flex-shrink: 0;
+        }
+        .mq-item {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 0.85rem 1.1rem;
+            min-width: 90px;
+            flex-shrink: 0;
+            transition: background 0.2s, transform 0.2s;
+            cursor: default;
+        }
+        .mq-item:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); }
+        .mq-item i { font-size: 2rem; }
+        .mq-item span { font-size: 0.7rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
+
         /* ── TILT WRAPPER ── */
         .tilt {
             transform-style: preserve-3d;
@@ -1176,86 +1228,78 @@
         <!-- Skills -->
         <section id="skills">
             <div class="container">
-                <div class="text-center mb-2 reveal">
+                <div class="text-center mb-4 reveal">
                     <p class="section-tag">Technical Skills</p>
                     <h2 class="section-heading">Skills &amp; Expertise</h2>
                 </div>
-                <div class="row g-4">
+            </div>
 
-                    <!-- Languages -->
-                    <div class="col-md-6 col-lg-4 reveal delay-1">
-                        <div class="skill-card">
-                            <div class="skill-icon"><i class="fas fa-code"></i></div>
-                            <h5>Languages</h5>
-                            <div class="skill-tags">
-                                <span class="sk-tag">Python</span>
-                                <span class="sk-tag">JavaScript</span>
-                                <span class="sk-tag">SQL</span>
-                                <span class="sk-tag">NoSQL</span>
-                            </div>
-                        </div>
+            <div class="ticker-outer">
+                <!-- Row 1 → right -->
+                <div class="ticker-track ticker-right">
+                    <div class="ticker-row">
+                        <div class="mq-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                        <div class="mq-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                        <div class="mq-item"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+                        <div class="mq-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                        <div class="mq-item"><i class="devicon-react-original colored"></i><span>React.js</span></div>
+                        <div class="mq-item"><i class="devicon-vuejs-plain colored"></i><span>Vue.js</span></div>
+                        <div class="mq-item"><i class="devicon-express-original colored"></i><span>Express.js</span></div>
+                        <div class="mq-item"><i class="devicon-fastapi-plain colored"></i><span>FastAPI</span></div>
+                        <div class="mq-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                        <div class="mq-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                        <div class="mq-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+                        <div class="mq-item"><i class="devicon-flutter-plain colored"></i><span>Flutter</span></div>
                     </div>
-
-                    <!-- Frameworks -->
-                    <div class="col-md-6 col-lg-4 reveal delay-2">
-                        <div class="skill-card">
-                            <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
-                            <h5>Frameworks &amp; Libraries</h5>
-                            <div class="skill-tags">
-                                <span class="sk-tag">Django</span>
-                                <span class="sk-tag">Node.js</span>
-                                <span class="sk-tag">Express.js</span>
-                                <span class="sk-tag">React.js</span>
-                                <span class="sk-tag">Vue.js</span>
-                            </div>
-                        </div>
+                    <div class="ticker-row" aria-hidden="true">
+                        <div class="mq-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                        <div class="mq-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                        <div class="mq-item"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+                        <div class="mq-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                        <div class="mq-item"><i class="devicon-react-original colored"></i><span>React.js</span></div>
+                        <div class="mq-item"><i class="devicon-vuejs-plain colored"></i><span>Vue.js</span></div>
+                        <div class="mq-item"><i class="devicon-express-original colored"></i><span>Express.js</span></div>
+                        <div class="mq-item"><i class="devicon-fastapi-plain colored"></i><span>FastAPI</span></div>
+                        <div class="mq-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                        <div class="mq-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                        <div class="mq-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+                        <div class="mq-item"><i class="devicon-flutter-plain colored"></i><span>Flutter</span></div>
                     </div>
-
-                    <!-- Databases -->
-                    <div class="col-md-6 col-lg-4 reveal delay-3">
-                        <div class="skill-card">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <h5>Databases</h5>
-                            <div class="skill-tags">
-                                <span class="sk-tag">PostgreSQL</span>
-                                <span class="sk-tag">MySQL</span>
-                                <span class="sk-tag">MongoDB</span>
-                            </div>
-                        </div>
+                </div>
+                <!-- Row 2 ← left -->
+                <div class="ticker-track ticker-left">
+                    <div class="ticker-row">
+                        <div class="mq-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+                        <div class="mq-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
+                        <div class="mq-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                        <div class="mq-item"><i class="devicon-gitlab-plain colored"></i><span>GitLab</span></div>
+                        <div class="mq-item"><i class="devicon-trello-plain colored"></i><span>Trello</span></div>
+                        <div class="mq-item"><i class="devicon-pandas-plain colored"></i><span>Pandas</span></div>
+                        <div class="mq-item"><i class="devicon-linux-plain colored"></i><span>Linux</span></div>
+                        <div class="mq-item"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+                        <div class="mq-item"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+                        <div class="mq-item"><i class="devicon-postman-plain colored"></i><span>Postman</span></div>
+                        <div class="mq-item"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+                        <div class="mq-item"><img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI" style="width:2rem;height:2rem;object-fit:contain;"/><span>Power BI</span></div>
+                        <div class="mq-item"><img src="https://img.icons8.com/color/48/nvivo.png" alt="NVivo" style="width:2rem;height:2rem;object-fit:contain;"/><span>NVivo</span></div>
                     </div>
-
-                    <!-- Tools -->
-                    <div class="col-md-6 col-lg-4 reveal delay-1">
-                        <div class="skill-card">
-                            <div class="skill-icon"><i class="fas fa-tools"></i></div>
-                            <h5>Tools &amp; Platforms</h5>
-                            <div class="skill-tags">
-                                <span class="sk-tag">Git</span>
-                                <span class="sk-tag">GitLab</span>
-                                <span class="sk-tag">Trello</span>
-                                <span class="sk-tag">AWS</span>
-                                <span class="sk-tag">Docker</span>
-                            </div>
-                        </div>
+                    <div class="ticker-row" aria-hidden="true">
+                        <div class="mq-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+                        <div class="mq-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
+                        <div class="mq-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                        <div class="mq-item"><i class="devicon-gitlab-plain colored"></i><span>GitLab</span></div>
+                        <div class="mq-item"><i class="devicon-trello-plain colored"></i><span>Trello</span></div>
+                        <div class="mq-item"><i class="devicon-pandas-plain colored"></i><span>Pandas</span></div>
+                        <div class="mq-item"><i class="devicon-linux-plain colored"></i><span>Linux</span></div>
+                        <div class="mq-item"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+                        <div class="mq-item"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+                        <div class="mq-item"><i class="devicon-postman-plain colored"></i><span>Postman</span></div>
+                        <div class="mq-item"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+                        <div class="mq-item"><img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI" style="width:2rem;height:2rem;object-fit:contain;"/><span>Power BI</span></div>
+                        <div class="mq-item"><img src="https://img.icons8.com/color/48/nvivo.png" alt="NVivo" style="width:2rem;height:2rem;object-fit:contain;"/><span>NVivo</span></div>
                     </div>
-
-                    <!-- Practices -->
-                    <div class="col-md-6 col-lg-8 reveal delay-2">
-                        <div class="skill-card">
-                            <div class="skill-icon"><i class="fas fa-check-circle"></i></div>
-                            <h5>Practices</h5>
-                            <div class="skill-tags">
-                                <span class="sk-tag">Test-Driven Development (TDD)</span>
-                                <span class="sk-tag">RESTful API Design</span>
-                                <span class="sk-tag">Database Optimization</span>
-                                <span class="sk-tag">Agile Methodologies</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </section>
 
         <!-- Projects -->
         <section id="projects">
